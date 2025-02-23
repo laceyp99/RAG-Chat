@@ -32,20 +32,20 @@ Currently, the application supports the following file types for document upload
    git clone https://github.com/laceyp99/RAG_Chat.git
    cd RAG-Chat
    ```
-
-3. **Install Dependencies:**
+2. **Install Dependencies:**
     To ensure that you have all the necessary python libraries and packages for this application, please run:
     ```shell
     pip install gradio python-dotenv langchain langchain_openai langchain_community bs4 chromadb cryptography pypdf
     ```
+    You may need to create a virtual environment to mitigate version compatability conflicts.
 
-4. **Set Up Environment Variables:**
+3. **Set Up Environment Variables:**
     Create a .env file in the project root directory and add your OpenAI API key:
     ```shell
     OPENAI_API_KEY=your_openai_api_key_here
     ```
 
-5. **Run the Application:**
+4. **Run the Application:**
     Start the Gradio interface by running:
     ```shell
     python app.py
