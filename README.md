@@ -30,7 +30,7 @@ Currently, the application supports the following file types for document upload
 
    ```shell
    git clone https://github.com/laceyp99/RAG_Chat.git
-   cd RAG_Chat
+   cd RAG-Chat
    ```
 
 3. **Install Dependencies:**
