@@ -2,6 +2,8 @@
 
 This application is a **Retrieval Augmented Generation (RAG) chatbot** built with LangChain and Gradio. It processes uploaded documents, splits them into chunks, and builds a vector store so that user prompts are answered in context using OpenAI's GPT-4o-mini model.
 
+![image](https://github.com/user-attachments/assets/fb6435aa-9d11-405f-a95f-71208751ac49)
+
 ## Supported File Types 📂
 
 Currently, the application supports the following file types for document uploads:
