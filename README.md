@@ -1,6 +1,6 @@
 # RAG Chatbot
 
-This application is a Retrieval Augmented Generation (RAG) chatbot built with LangChain and Gradio. It processes uploaded documents, splits them into chunks, and builds a vector store so that user prompts are answered in context using OpenAI's Chat model.
+This application is a Retrieval Augmented Generation (RAG) chatbot built with LangChain and Gradio. It processes uploaded documents, splits them into chunks, and builds a vector store so that user prompts are answered in context using OpenAI's GPT-4o-mini model.
 
 ## Supported File Types
 
