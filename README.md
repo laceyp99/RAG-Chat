@@ -1,8 +1,8 @@
-# RAG Chatbot
+# RAG Chatbot 🤖
 
-This application is a Retrieval Augmented Generation (RAG) chatbot built with LangChain and Gradio. It processes uploaded documents, splits them into chunks, and builds a vector store so that user prompts are answered in context using OpenAI's GPT-4o-mini model.
+This application is a **Retrieval Augmented Generation (RAG) chatbot** built with LangChain and Gradio. It processes uploaded documents, splits them into chunks, and builds a vector store so that user prompts are answered in context using OpenAI's GPT-4o-mini model.
 
-## Supported File Types
+## Supported File Types 📂
 
 Currently, the application supports the following file types for document uploads:
 
@@ -13,7 +13,7 @@ Currently, the application supports the following file types for document upload
 - **CSV** (`.csv`)
 
 
-## Features
+## Features 🚀
 
 - **Document Loading:** Upload files via the Gradio interface and load them into the system.
 - **Vector Store & Embeddings:** Uses Chroma and OpenAI embeddings to create a searchable document store.
@@ -22,7 +22,7 @@ Currently, the application supports the following file types for document upload
 - **Advanced Parameters:** Fine-tune document processing by adjusting chunk size, chunk overlap, and retrieval k via an advanced parameters accordion. This keeps the interface simple for basic users while providing additional control for advanced users.
 - **User Interface:** A streamlined Gradio-based interface for document uploads and chatbot interactions.
 
-## Setup and Installation
+## Setup and Installation 🛠️
 
 1. **Clone the Repository:**
 
@@ -50,26 +50,26 @@ Currently, the application supports the following file types for document upload
     ```
 
     This will launch a local server where you can:
-    * Upload supported document types (PDF, TXT, MD, JSON, CSV)
-    * Build the RAG chain
-    * Chat with the RAG bot using the loaded documents
+    * Upload supported document types (PDF, TXT, MD, JSON, CSV) 📄
+    * Build the RAG chain ⚙️
+    * Chat with the RAG bot using the loaded documents 💬
 
-## Files Overview
+## Files Overview 🗂️
 * **main.py**: Contains core logic for document loading, text splitting, vector store creation, and RAG chain construction.
 * **app.py**: Defines the Gradio interface for document uploads and chatbot interactions.
 
-## Notes
+## Notes 📌
 - **Advanced Parameters Warning:**  
-  - Adjusting chunk size and overlap can affect processing times and memory usage. Smaller chunk sizes or larger overlaps may lead to a significantly higher number of splits.
+  - Adjusting chunk size and overlap can affect processing times and memory usage. Smaller chunk sizes or larger overlaps may lead to a significantly higher number of splits. ⚠️
   - Lower retrieval k values might reduce context for query responses, while higher values could slow down search performance.
 - **Generation Temperature:**  
-  - Changing the generation temperature alters the response creativity. Higher values might yield less predictable or overly creative responses.
+  - Changing the generation temperature alters the response creativity. Higher values might yield less predictable or overly creative responses. ⚠️
 - **Document Requirements:**  
   - Ensure documents are well-formatted. PDFs should not be password-protected, and JSON files must be valid to load correctly.
 - **User Control:**  
   - Default values are set to simplify basic usage; advanced users can tailor these settings for specific needs.
 
-## Future Enhancements
+## Future Enhancements 🔮
 - **Web URL Support:**  
   - Integrate the ability to scrape webpage content from supplied URLs and include it in the document pool.
 - **Expanded File Type Support:**  
