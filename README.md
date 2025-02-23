@@ -12,16 +12,15 @@ Currently, the application supports the following file types for document upload
 - **JSON** (`.json`)
 - **CSV** (`.csv`)
 
-## Future Enhancements
-
-- **Web URL Support:** Future versions will allow users to input web URLs to scrape webpage content and include it as part of the document pool.
 
 ## Features
 
 - **Document Loading:** Upload files via the Gradio interface and load them into the system.
 - **Vector Store & Embeddings:** Uses Chroma and OpenAI embeddings to create a searchable document store.
 - **RAG Chain Construction:** Builds a chain that retrieves context from loaded documents and answers user queries using a language model.
-- **User Interface:** Gradio-based interface to load documents and chat with the RAG bot.
+- **Adjustable Generation Temperature:** Dynamically control the generation temperature for the language model to vary response creativity.
+- **Advanced Parameters:** Fine-tune document processing by adjusting chunk size, chunk overlap, and retrieval k via an advanced parameters accordion. This keeps the interface simple for basic users while providing additional control for advanced users.
+- **User Interface:** A streamlined Gradio-based interface for document uploads and chatbot interactions.
 
 ## Setup and Installation
 
@@ -35,7 +34,7 @@ Currently, the application supports the following file types for document upload
 3. **Install Dependencies:**
     To ensure that you have all the necessary python libraries and packages for this application, please run:
     ```shell
-    pip install gradio python-dotenv langchain langchain_openai langchain_community bs4
+    pip install gradio python-dotenv langchain langchain_openai langchain_community bs4 chromadb cryptography pypdf
     ```
 
 4. **Set Up Environment Variables:**
@@ -60,5 +59,22 @@ Currently, the application supports the following file types for document upload
 * **app.py**: Defines the Gradio interface for document uploads and chatbot interactions.
 
 ## Notes
-* For optimal performance, ensure your documents are well-formatted and that PDFs are not password-protected.
-* The current version only supports the listed file types. Web URL scraping will be available in future updates.
+- **Advanced Parameters Warning:**  
+  - Adjusting chunk size and overlap can affect processing times and memory usage. Smaller chunk sizes or larger overlaps may lead to a significantly higher number of splits.
+  - Lower retrieval k values might reduce context for query responses, while higher values could slow down search performance.
+- **Generation Temperature:**  
+  - Changing the generation temperature alters the response creativity. Higher values might yield less predictable or overly creative responses.
+- **Document Requirements:**  
+  - Ensure documents are well-formatted. PDFs should not be password-protected, and JSON files must be valid to load correctly.
+- **User Control:**  
+  - Default values are set to simplify basic usage; advanced users can tailor these settings for specific needs.
+
+## Future Enhancements
+- **Web URL Support:**  
+  - Integrate the ability to scrape webpage content from supplied URLs and include it in the document pool.
+- **Expanded File Type Support:**  
+  - Add support for additional document types, such as DOCX, to broaden the scope of data that can be processed.
+- **UI Enhancements:**  
+  - Implement tooltips or inline documentation within the Gradio interface for advanced parameters and generation temperature, aiding user understanding.
+- **Vector Store Persistence:**  
+    - Enable saving and loading of the vector store across sessions for a more tailored and efficient experience.
