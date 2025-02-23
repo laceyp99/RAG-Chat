@@ -1,9 +1,11 @@
-import os bs4 json
+import os
+import bs4
+import json
 from dotenv import load_dotenv
 from langchain import hub
 from langchain.schema import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.document_loaders import WebBaseLoader, TextLoader, JSONLoader, CSVLoader, PyPDFLoader
+from langchain_community.document_loaders import WebBaseLoader, TextLoader, CSVLoader, PyPDFLoader
 from langchain_community.vectorstores import Chroma
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
